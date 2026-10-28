@@ -933,7 +933,10 @@
         <a href="https://science-cuisine-primary-walt.trycloudflare.com" target="_blank" style="color:#38bdf8; font-weight:700; border:1px solid rgba(56,189,248,0.3); padding:4px 8px; border-radius:6px; background:rgba(56,189,248,0.08);">⚙️ Web App Quản Lý</a>
       </div>
       <div>
-        <button type="button" class="btn-create-post" onclick="openCreateModal()">
+        <button type="button" class="btn-create-post" onclick="openBookingModal()" style="background:linear-gradient(135deg, #10b981 0%, #059669 100%); border:none; color:#fff; font-weight:800; box-shadow:0 0 15px rgba(16,185,129,0.35);">
+          💎 Đặt Banner / Booking PR
+        </button>
+        <button type="button" class="btn-create-post" onclick="openCreateModal()" style="background:#1e293b; color:#cbd5e1; border:1px solid #334155;">
           ✍️ Đăng Tin Mới
         </button>
       </div>
@@ -943,14 +946,14 @@
   <!-- Top Leaderboard Ad Slot #1 -->
   <div class="container ad-leaderboard-wrap">
     <span class="ad-label">Quảng cáo được tài trợ • Google AdSense Leaderboard Slot</span>
-    <div class="ad-leaderboard" onclick="triggerAdClick('Leaderboard Banner')">
-      <div class="ad-badge-google">Ads by Google</div>
+    <div class="ad-leaderboard" onclick="handleAffiliateClick('vps')" style="cursor:pointer;" title="Nhấp để nhận ưu đãi đối tác chính thức">
+      <div class="ad-badge-google" style="background:#059669; color:#fff;">ƯU ĐÃI ĐỐI TÁC CHÍNH THỨC</div>
       <div class="ad-content-left">
-        <h4>🚀 Nhận 100GB Cloud VPS Tốc Độ Cao — Giảm 50% Cho Lập Trình Viên & Creator</h4>
-        <p>Hạ tầng máy chủ đám mây tối ưu chạy bot AI, automation kịch bản video và website tin tức.</p>
+        <h4 style="color:#f8fafc;">🚀 Nhận Giảm 75% Cloud VPS Tốc Độ Cao — Tặng Miễn Phí Tên Miền .COM</h4>
+        <p>Hạ tầng máy chủ đám mây tối ưu chạy bot AI, website tin tức & automation kịch bản video 24/7.</p>
       </div>
       <div>
-        <span class="btn-ad-cta">Nhận Ưu Đãi 50% →</span>
+        <span class="btn-ad-cta" style="background:linear-gradient(135deg, #38bdf8, #0284c7); color:#030712; font-weight:800;">Nhận Ưu Đãi 75% →</span>
       </div>
     </div>
   </div>
@@ -1028,15 +1031,27 @@
 
       <!-- Right Column: Ad & Revenue Widgets -->
       <aside class="sidebar-col">
-        <!-- Ad Slot #2: 300x250 Medium Rectangle -->
-        <div class="ad-sidebar-box" onclick="triggerAdClick('Sidebar Square Banner')">
-          <div class="ad-badge-google">Quảng Cáo Google</div>
+        <!-- Ad Slot #2: High-Converting Tech Partner Box -->
+        <div class="ad-sidebar-box" onclick="handleAffiliateClick('aiTools')" style="cursor:pointer; background:linear-gradient(145deg, #0f172a 0%, #08152e 100%); border:1px solid rgba(56,189,248,0.4);" title="Nhấp để nhận bản dùng thử công cụ AI">
+          <div class="ad-badge-google" style="background:#3b82f6; color:#fff;">ĐỐI TÁC CÔNG NGHỆ CHỌN LỌC</div>
           <div class="ad-sidebar-inner">
-            <span style="font-size:2rem; display:block; margin-bottom:6px;">📈</span>
-            <h4>Khóa Học Tạo Video AI Triệu View</h4>
-            <p>Xây kênh kiếm tiền YouTube Shorts & TikTok không cần lộ mặt. Giảm 60% hôm nay.</p>
-            <span class="btn-ad-cta" style="display:inline-block;">Xem Chi Tiết →</span>
+            <span style="font-size:2rem; display:block; margin-bottom:6px;">🎨</span>
+            <h4 style="color:#f8fafc; font-size:14px; font-weight:800;">Bộ Công Cụ AI Thiết Kế & Video Triệu View</h4>
+            <p style="color:#94a3b8; font-size:12px; margin-bottom:12px;">Dùng thử miễn phí Canva Pro AI & Bộ tạo video tự động cho Creator. Không cần lộ mặt.</p>
+            <span class="btn-ad-cta" style="display:inline-block; background:#38bdf8; color:#030712; font-weight:800;">Dùng Thử Miễn Phí →</span>
           </div>
+        </div>
+
+        <!-- Direct Sponsor Booking Card (Bán Banner & PR Thu Tiền Ngay) -->
+        <div style="background:linear-gradient(135deg, rgba(16,185,129,0.12), rgba(6,78,59,0.25)); border:1.5px solid rgba(16,185,129,0.45); border-radius:14px; padding:1.25rem; text-align:center;">
+          <div style="display:inline-block; background:rgba(16,185,129,0.2); border:1px solid #10b981; color:#6ee7b7; font-size:10px; font-weight:800; padding:2px 8px; border-radius:999px; margin-bottom:8px;">
+            💎 DÀNH CHO DOANH NGHIỆP & STARTUP
+          </div>
+          <h4 style="color:#fff; font-size:14px; font-weight:800; margin-bottom:6px;">Đặt Banner & Bài PR Tại AI Pulse</h4>
+          <p style="color:#cbd5e1; font-size:11.5px; line-height:1.5; margin-bottom:12px;">Tiếp cận hơn 30.000+ độc giả đam mê công nghệ, lập trình viên và nhà kinh doanh số mỗi tháng.</p>
+          <button type="button" onclick="openBookingModal()" style="width:100%; background:#10b981; color:#030712; border:none; border-radius:8px; padding:8px 12px; font-size:12px; font-weight:800; cursor:pointer;">
+            Bảng Giá & Booking Ngay →
+          </button>
         </div>
 
         <!-- Live Ad Revenue Simulator Widget -->
@@ -1167,7 +1182,7 @@
       </div>
 
       <!-- Google AdSense In-Article Responsive Slot -->
-      <div class="ad-in-article-wrap" style="margin: 1.5rem 0; padding: 1rem; background: rgba(15, 23, 42, 0.6); border: 1px dashed rgba(56, 189, 248, 0.35); border-radius: 14px; text-align: center;">
+      <div class="ad-in-article-wrap" onclick="handleAffiliateClick('cyberSec')" style="margin: 1.5rem 0; padding: 1rem; background: rgba(15, 23, 42, 0.6); border: 1px dashed rgba(56, 189, 248, 0.35); border-radius: 14px; text-align: center; cursor: pointer;" title="Nhấp để nhận giải pháp bảo mật & tăng tốc AI">
         <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
           <span style="font-size: 10px; color: #94a3b8; text-transform: uppercase; font-weight: 700; letter-spacing: 0.5px;">Quảng cáo được tài trợ • Google AdSense In-Article Unit</span>
           <span class="ad-badge-google" style="margin:0;">Ads by Google</span>
@@ -1299,6 +1314,25 @@
   <!-- Script Engine -->
   <script>
     var ARTICLES = [
+  {
+  "id": 18902,
+  "title": "Những hoài nghi về tình trạng iPhone Duo nứt màn hình",
+  "category": "TOOLS",
+  "categoryLabel": "THIẾT BỊ & PHẦN CỨNG",
+  "snippet": "Một số điện thoại gập iPhone Duo hỏng màn hình ở cùng một vị trí làm dấy lên nghi vấn \"tồn tại lỗi mang tính hệ thống\".",
+  "readTime": "3 phút",
+  "author": "Ban Biên Tập AI Pulse (Theo VNExpress Số Hóa)",
+  "views": 0,
+  "likes": 78,
+  "icon": "💻",
+  "source": "VNExpress Số Hóa",
+  "source_url": "https://vnexpress.net/nhung-hoai-nghi-ve-tinh-trang-iphone-duo-nut-man-hinh-5137765.html",
+  "content": "<p><strong>Bản tin cập nhật từ VNExpress Số Hóa:</strong> Một số điện thoại gập iPhone Duo hỏng màn hình ở cùng một vị trí làm dấy lên nghi vấn \"tồn tại lỗi mang tính hệ thống\".</p>\n<h2>1. Bối Cảnh & Diễn Biến Sự Kiện</h2>\n<p>Theo ghi nhận thực tế từ nguồn tin chính thống <em>VNExpress Số Hóa</em>, sự kiện 'Những hoài nghi về tình trạng iPhone Duo nứt màn hình' đang tạo ra làn sóng thảo luận sôi nổi trong cộng đồng công nghệ và giới chuyên môn tại Việt Nam.</p>\n<h2>2. Tác Động Đến Lĩnh Vực AI & Chuyển Đổi Số</h2>\n<p>Các chuyên gia nhận định đây là bước tiến quan trọng mở ra tiềm năng ứng dụng thực tiễn to lớn trong việc nâng cao hiệu suất lao động và tối ưu hóa quy trình làm việc tự động hóa.</p>\n<div style=\"background:rgba(56,189,248,0.08); border-left:4px solid #38bdf8; padding:1rem; border-radius:4px; margin:1.5rem 0;\">\n  <strong style=\"color:#38bdf8;\">💡 Góc nhìn chuyên gia AI Pulse:</strong>\n  <p style=\"margin-top:6px; color:#cbd5e1; font-size:13px;\">Việc chủ động cập nhật công nghệ mới sẽ giúp doanh nghiệp và cá nhân duy trì lợi thế cạnh tranh vượt trội trong kỷ nguyên số 2026.</p>\n</div>\n<p style=\"margin-top:1.5rem; font-size:12px; color:#94a3b8; border-top:1px dashed #334155; padding-top:10px;\">\n  📌 <em>Nguồn tin xác thực:</em> Bài viết được tổng hợp từ <strong>VNExpress Số Hóa</strong>.<br/>\n  🔗 <a href=\"https://vnexpress.net/nhung-hoai-nghi-ve-tinh-trang-iphone-duo-nut-man-hinh-5137765.html\" target=\"_blank\" rel=\"noreferrer\" style=\"color:#38bdf8; text-decoration:underline;\">Nhấp vào đây để xem bài viết gốc trên VNExpress Số Hóa ↗</a>\n</p>",
+  "created_at": "2026-10-28T20:21:42.649462+00:00",
+  "publish_time": "03:21 • 29/10/2026",
+  "has_infographic": true,
+  "image_url": "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=900&q=80"
+},
   {
   "id": 18533,
   "title": "Oppo Find X10 Pro Max",
@@ -2288,9 +2322,66 @@
       }
     }
 
+    // ================= REAL AFFILIATE & MONETIZATION DISPATCHER =================
+    const AIPULSE_DEALS = {
+      vps: {
+        name: 'Hostinger Cloud VPS 75% OFF',
+        url: 'https://www.hostinger.vn/web-hosting?utm_source=aipulse&utm_medium=affiliate'
+      },
+      aiTools: {
+        name: 'Canva Pro & AI Creator Suite',
+        url: 'https://www.canva.com/pro/?utm_source=aipulse'
+      },
+      cyberSec: {
+        name: 'NordVPN 10Gbps CyberSec',
+        url: 'https://nordvpn.com/?utm_source=aipulse'
+      },
+      elevenlabs: {
+        name: 'ElevenLabs AI Voice Studio',
+        url: 'https://elevenlabs.io/?utm_source=aipulse'
+      }
+    };
+
+    function handleAffiliateClick(dealKey) {
+      const deal = AIPULSE_DEALS[dealKey] || AIPULSE_DEALS.vps;
+      try {
+        const c = Number(localStorage.getItem('aipulse_aff_clicks') || '0') + 1;
+        localStorage.setItem('aipulse_aff_clicks', String(c));
+      } catch(e) {}
+      window.open(deal.url, '_blank', 'noopener,noreferrer,sponsored');
+    }
+
     function triggerAdClick(slotName) {
-      totalClicks += 1;
-      alert('Đã ghi nhận click vào ' + slotName + '! Trong thực tế, độc giả sẽ được chuyển hướng tới trang nhà cung cấp để phát sinh hoa hồng Affiliate hoặc doanh thu Google AdSense.');
+      try {
+        const c = Number(localStorage.getItem('aipulse_ad_clicks') || '0') + 1;
+        localStorage.setItem('aipulse_ad_clicks', String(c));
+      } catch(e) {}
+
+      if (slotName.includes('Canva')) {
+        handleAffiliateClick('aiTools');
+      } else if (slotName.includes('ElevenLabs')) {
+        handleAffiliateClick('elevenlabs');
+      } else if (slotName.includes('Claude') || slotName.includes('DeepSeek')) {
+        window.open('https://www.deepseek.com/?utm_source=aipulse', '_blank', 'noopener,noreferrer');
+      } else {
+        handleAffiliateClick('vps');
+      }
+    }
+
+    function openBookingModal() {
+      const el = document.getElementById('bookingModal');
+      if (el) el.style.display = 'flex';
+    }
+
+    function closeBookingModal() {
+      const el = document.getElementById('bookingModal');
+      if (el) el.style.display = 'none';
+    }
+
+    function handleBookingOverlayClick(e) {
+      if (e.target.id === 'bookingModal') {
+        closeBookingModal();
+      }
     }
 
     function updateRevenueMetrics() {
@@ -2469,6 +2560,74 @@
         <div>
           <span>Báo cáo minh bạch 100% dữ liệu thực tế • Google Sheets Live Sync</span>
         </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Direct Advertising Booking Modal (Kiếm tiền Bán Banner & Bài PR Trực Tiếp) -->
+  <div class="modal-overlay" id="bookingModal" onclick="handleBookingOverlayClick(event)" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.85); z-index:9999; align-items:center; justify-content:center; padding:1rem; backdrop-blur:md;">
+    <div class="modal-card" onclick="event.stopPropagation()" style="max-width:680px; width:100%; max-height:90vh; overflow-y:auto; background:#0f172a; border:1px solid #334155; border-radius:20px; padding:2rem; box-shadow:0 25px 50px -12px rgba(0,0,0,0.8); position:relative;">
+      <button type="button" class="modal-close" onclick="closeBookingModal()" style="position:absolute; top:1rem; right:1rem; background:#1e293b; color:#cbd5e1; border:none; width:36px; height:36px; border-radius:50%; font-size:18px; cursor:pointer;">✕</button>
+
+      <div style="display:flex; align-items:center; gap:10px; margin-bottom:1rem;">
+        <span style="font-size:2rem;">💎</span>
+        <div>
+          <h3 style="font-size:1.4rem; font-weight:800; color:#fff; margin:0;">Bảng Giá Quảng Cáo & Booking Bài PR</h3>
+          <p style="font-size:12px; color:#94a3b8; margin:2px 0 0;">Tiếp cận độc giả công nghệ, founder và chuyên gia AI chất lượng cao tại Việt Nam</p>
+        </div>
+      </div>
+
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(180px, 1fr)); gap:12px; margin:1.5rem 0;">
+        <div style="background:#020617; border:1px solid #1e293b; border-radius:12px; padding:14px; text-align:center;">
+          <span style="display:inline-block; font-size:10px; font-weight:800; color:#38bdf8; background:rgba(56,189,248,0.15); padding:2px 8px; border-radius:6px; margin-bottom:8px;">GÓI 1: BANNER HEADER</span>
+          <div style="font-size:18px; font-weight:800; color:#fff;">500.000đ</div>
+          <div style="font-size:11px; color:#64748b; margin-bottom:8px;">/ tháng hiển thị</div>
+          <ul style="font-size:11px; color:#94a3b8; text-align:left; padding-left:16px; margin:0; line-height:1.5;">
+            <li>Vị trí Top 1 dưới Menu</li>
+            <li>Hiển thị 100% trang web</li>
+            <li>Link trực tiếp DoFollow</li>
+          </ul>
+        </div>
+
+        <div style="background:#020617; border:1.5px solid #10b981; border-radius:12px; padding:14px; text-align:center; position:relative;">
+          <span style="display:inline-block; font-size:10px; font-weight:800; color:#10b981; background:rgba(16,185,129,0.15); padding:2px 8px; border-radius:6px; margin-bottom:8px;">GÓI 2: BÀI PR DOANH NGHIỆP</span>
+          <div style="font-size:18px; font-weight:800; color:#34d399;">350.000đ</div>
+          <div style="font-size:11px; color:#64748b; margin-bottom:8px;">/ bài viết vĩnh viễn</div>
+          <ul style="font-size:11px; color:#94a3b8; text-align:left; padding-left:16px; margin:0; line-height:1.5;">
+            <li>Đăng bài nổi bật trang chủ</li>
+            <li>Tặng 01 Infographic dữ liệu</li>
+            <li>Giữ bài vĩnh viễn trên Cloud</li>
+          </ul>
+        </div>
+
+        <div style="background:#020617; border:1px solid #1e293b; border-radius:12px; padding:14px; text-align:center;">
+          <span style="display:inline-block; font-size:10px; font-weight:800; color:#fbbf24; background:rgba(251,191,36,0.15); padding:2px 8px; border-radius:6px; margin-bottom:8px;">GÓI 3: GẮN BACKLINK</span>
+          <div style="font-size:18px; font-weight:800; color:#fff;">200.000đ</div>
+          <div style="font-size:11px; color:#64748b; margin-bottom:8px;">/ link bài viết</div>
+          <ul style="font-size:11px; color:#94a3b8; text-align:left; padding-left:16px; margin:0; line-height:1.5;">
+            <li>Chèn link vào bài có sẵn</li>
+            <li>Tối ưu SEO Google Search</li>
+            <li>Bảo hành trọn đời bài viết</li>
+          </ul>
+        </div>
+      </div>
+
+      <div style="background:rgba(56,189,248,0.06); border:1px solid rgba(56,189,248,0.3); border-radius:12px; padding:14px; margin-bottom:1.5rem;">
+        <h4 style="color:#38bdf8; font-size:13px; font-weight:800; margin-bottom:4px;">📞 Phương Thức Liên Hệ Booking & Thanh Toán Trực Tiếp:</h4>
+        <p style="font-size:12px; color:#cbd5e1; margin-bottom:10px;">Vui lòng liên hệ với ban quản trị tòa soạn qua các kênh dưới đây để nhận hợp đồng và triển khai banner ngay trong ngày:</p>
+        <div style="display:flex; flex-wrap:wrap; gap:10px;">
+          <a href="mailto:ads@aipulse.vn?subject=Booking%20Quang%20Cao%20AI%20Pulse" style="display:inline-flex; align-items:center; gap:6px; background:#1e293b; border:1px solid #38bdf8; color:#38bdf8; padding:8px 14px; border-radius:8px; font-size:12px; font-weight:700; text-decoration:none;">
+            📧 Email: ads@aipulse.vn
+          </a>
+          <a href="mailto:danhnpcd@gmail.com?subject=Lien%20He%20Dat%20Banner%20AI%20Pulse" style="display:inline-flex; align-items:center; gap:6px; background:#1e293b; border:1px solid #10b981; color:#34d399; padding:8px 14px; border-radius:8px; font-size:12px; font-weight:700; text-decoration:none;">
+            💬 Quản Trị Viên: danhnpcd@gmail.com
+          </a>
+        </div>
+      </div>
+
+      <div style="display:flex; justify-content:flex-end;">
+        <button type="button" onclick="closeBookingModal()" style="background:#334155; color:#fff; border:none; padding:8px 20px; border-radius:8px; font-size:12px; font-weight:700; cursor:pointer;">Đóng Cửa Sổ</button>
       </div>
     </div>
   </div>
