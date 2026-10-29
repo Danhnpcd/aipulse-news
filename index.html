@@ -1149,6 +1149,51 @@
 
       <!-- Right Column: Ad & Revenue Widgets -->
       <aside class="sidebar-col">
+          <!-- Lead Magnet: Free Ebook 50+ Prompts -->
+          <div class="sidebar-lead-magnet" style="background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%); border: 1px solid rgba(139, 92, 246, 0.4); border-radius: 16px; padding: 1.25rem; box-shadow: 0 4px 20px rgba(139, 92, 246, 0.15);">
+            <div style="display:flex; align-items:center; gap:8px; margin-bottom:8px;">
+              <span style="font-size:24px;">🎁</span>
+              <span style="font-size:11px; font-weight:800; color:#a78bfa; text-transform:uppercase; letter-spacing:0.5px;">QUÀ TẶNG ĐỘC GIẢ AI PULSE</span>
+            </div>
+            <h4 style="font-size:14px; font-weight:800; color:#fff; line-height:1.4; margin-bottom:8px;">Ebook: 50+ Kỹ Thuật Prompt & Quy Trình Kiếm Tiền MMO Với AI 2026</h4>
+            <p style="font-size:11px; color:#cbd5e1; margin-bottom:12px; line-height:1.4;">Bí quyết xây dựng hệ thống thu nhập thụ động $500/tháng từ tiếp thị liên kết & AI Automation không cần vốn.</p>
+            <form onsubmit="handleClaimLeadMagnet(event)" style="display:flex; flex-direction:column; gap:8px;">
+              <input type="email" id="leadEmailInput" placeholder="Nhập email của bạn để nhận Ebook..." required style="width:100%; box-sizing:border-box; padding:8px 12px; border-radius:8px; background:#0f172a; border:1px solid rgba(139, 92, 246, 0.4); color:#fff; font-size:12px; outline:none;">
+              <button type="submit" style="background:linear-gradient(135deg, #8b5cf6, #6366f1); color:#fff; border:none; padding:8px 14px; border-radius:8px; font-weight:800; font-size:12px; cursor:pointer; display:flex; align-items:center; justify-content:center; gap:6px;">
+                <span>📥 Tải Ebook Miễn Phí (PDF)</span>
+              </button>
+            </form>
+            <div id="leadClaimSuccess" style="display:none; margin-top:8px; font-size:11px; color:#34d399; font-weight:700;">
+              ✓ Đã ghi nhận! Tải ngay tài liệu hoặc kiểm tra hộp thư của bạn.
+            </div>
+          </div>
+
+          <!-- High-Converting Coupon Box -->
+          <div class="sidebar-coupon-box" style="background: rgba(15, 23, 42, 0.85); border: 1px solid rgba(245, 158, 11, 0.35); border-radius: 16px; padding: 1.25rem;">
+            <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:8px;">
+              <span style="font-size:11px; font-weight:800; color:#fbbf24; text-transform:uppercase;">🏷️ MÃ ƯU ĐÃI ĐỘC QUYỀN</span>
+              <span style="font-size:10px; color:#94a3b8; background:rgba(255,255,255,0.06); padding:2px 6px; border-radius:4px;">HOT</span>
+            </div>
+            <div style="background:#020617; border:1px dashed #f59e0b; border-radius:10px; padding:10px; margin-bottom:10px; display:flex; justify-content:space-between; align-items:center;">
+              <div>
+                <div style="font-size:13px; font-weight:800; color:#38bdf8;">AIPULSE75</div>
+                <div style="font-size:10px; color:#94a3b8;">Giảm 75% Cloud VPS + Free domain</div>
+              </div>
+              <button type="button" onclick="copyCouponCode('AIPULSE75', 'hostingerCloud')" style="background:#f59e0b; color:#0f172a; border:none; border-radius:6px; padding:5px 10px; font-size:11px; font-weight:800; cursor:pointer;">
+                Copy Mã
+              </button>
+            </div>
+            <div style="background:#020617; border:1px dashed #10b981; border-radius:10px; padding:10px; display:flex; justify-content:space-between; align-items:center;">
+              <div>
+                <div style="font-size:13px; font-weight:800; color:#34d399;">CANVA30</div>
+                <div style="font-size:10px; color:#94a3b8;">Dùng thử Canva Pro AI 30 ngày</div>
+              </div>
+              <button type="button" onclick="copyCouponCode('CANVA30', 'aiTools')" style="background:#10b981; color:#0f172a; border:none; border-radius:6px; padding:5px 10px; font-size:11px; font-weight:800; cursor:pointer;">
+                Copy Mã
+              </button>
+            </div>
+          </div>
+
         <!-- Ad Slot #2: High-Converting Tech Partner Box -->
         <div class="ad-sidebar-box" onclick="handleAffiliateClick('aiTools')" style="cursor:pointer; background:linear-gradient(145deg, #0f172a 0%, #08152e 100%); border:1px solid rgba(56,189,248,0.4);" title="Nhấp để nhận bản dùng thử công cụ AI">
           <div class="ad-badge-google" style="background:#3b82f6; color:#fff;">ĐỐI TÁC CÔNG NGHỆ CHỌN LỌC</div>
@@ -3039,6 +3084,23 @@
       <div style="display:flex; justify-content:flex-end;">
         <button type="button" onclick="closeBookingModal()" style="background:#334155; color:#fff; border:none; padding:8px 20px; border-radius:8px; font-size:12px; font-weight:700; cursor:pointer;">Đóng Cửa Sổ</button>
       </div>
+    </div>
+  </div>
+
+  <!-- Sticky High-Converting Deal Bar -->
+  <div id="stickyDealBar" style="position:fixed; bottom:0; left:0; right:0; z-index:999; background:linear-gradient(90deg, #090d16 0%, #0f172a 100%); border-top:1px solid rgba(56,189,248,0.4); padding:10px 16px; box-shadow:0 -4px 20px rgba(0,0,0,0.6); display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px;">
+    <div style="display:flex; align-items:center; gap:10px;">
+      <span style="font-size:20px;">🔥</span>
+      <div>
+        <span style="font-size:12px; font-weight:800; color:#38bdf8; text-transform:uppercase; letter-spacing:0.5px;">ƯU ĐÃI ĐỘC QUYỀN AI PULSE:</span>
+        <span style="font-size:12px; color:#f8fafc; margin-left:6px;">Giảm 75% Cloud VPS + Miễn Phí Tên Miền .COM vận hành AI 24/7!</span>
+      </div>
+    </div>
+    <div style="display:flex; align-items:center; gap:8px;">
+      <button type="button" onclick="handleAffiliateClick('hostingerCloud')" style="background:linear-gradient(135deg, #0284c7, #06b6d4); color:#fff; border:none; border-radius:8px; padding:6px 16px; font-size:12px; font-weight:800; cursor:pointer; box-shadow:0 0 12px rgba(6,182,212,0.4);">
+        Kích Hoạt Deal Giảm 75% →
+      </button>
+      <button type="button" onclick="document.getElementById('stickyDealBar').style.display='none'" style="background:none; border:none; color:#94a3b8; font-size:16px; cursor:pointer; padding:4px;" title="Tắt thanh ưu đãi">✕</button>
     </div>
   </div>
 
