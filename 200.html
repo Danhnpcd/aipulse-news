@@ -990,6 +990,236 @@
     color: #0f172a !important;
   }
 
+
+  /* ========================================================
+     COMPREHENSIVE MOBILE OPTIMIZATIONS (AI PULSE NEWS)
+     ======================================================== */
+  html, body {
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+  }
+
+  /* Hamburger & Mobile Controls */
+  .mobile-controls {
+    display: none;
+    align-items: center;
+    gap: 8px;
+  }
+  .btn-mobile-icon {
+    background: #0f172a;
+    border: 1px solid rgba(56, 189, 248, 0.3);
+    color: #38bdf8;
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .btn-mobile-icon:hover, .btn-mobile-icon:active {
+    background: rgba(56, 189, 248, 0.15);
+    border-color: #38bdf8;
+  }
+
+  /* Mobile Slide-down Navigation Drawer */
+  #mobileDrawer {
+    display: none;
+    background: #090e1a;
+    border-bottom: 1px solid rgba(56, 189, 248, 0.25);
+    padding: 1rem 1.25rem 1.5rem;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    animation: slideDown 0.25s ease-out;
+  }
+  @keyframes slideDown {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .mobile-nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 1.25rem;
+  }
+  .mobile-nav-links a {
+    color: #cbd5e1;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 10px 14px;
+    border-radius: 8px;
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+  .mobile-nav-links a:active, .mobile-nav-links a.active {
+    background: rgba(6, 182, 212, 0.15);
+    color: #38bdf8;
+    border-color: rgba(56, 189, 248, 0.4);
+  }
+  .mobile-action-btns {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  /* Screen Breakpoints */
+  @media (max-width: 1024px) {
+    .nav-menu {
+      display: none !important;
+    }
+    .desktop-action-btns {
+      display: none !important;
+    }
+    .mobile-controls {
+      display: flex !important;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .container {
+      padding: 0 0.85rem !important;
+    }
+    .top-bar-inner {
+      flex-wrap: nowrap !important;
+      overflow-x: auto !important;
+      scrollbar-width: none !important;
+      padding-bottom: 2px !important;
+    }
+    .top-bar-inner::-webkit-scrollbar {
+      display: none !important;
+    }
+    .trending-tags {
+      flex-wrap: nowrap !important;
+      white-space: nowrap !important;
+      overflow-x: auto !important;
+      scrollbar-width: none !important;
+      flex-shrink: 0 !important;
+    }
+    .live-indicator {
+      display: none !important;
+    }
+    .logo {
+      font-size: 1.15rem !important;
+    }
+    .logo-badge {
+      display: none !important;
+    }
+    .category-filter-wrap {
+      padding: 0 0 10px 0 !important;
+    }
+    .category-tabs {
+      overflow-x: auto !important;
+      white-space: nowrap !important;
+      flex-wrap: nowrap !important;
+      -webkit-overflow-scrolling: touch !important;
+      scrollbar-width: none !important;
+      width: 100% !important;
+      padding-bottom: 6px !important;
+    }
+    .category-tabs::-webkit-scrollbar {
+      display: none !important;
+    }
+    .cat-btn {
+      flex-shrink: 0 !important;
+      font-size: 11px !important;
+      padding: 6px 12px !important;
+    }
+    .hero-editorial {
+      grid-template-columns: 1fr !important;
+      gap: 1rem !important;
+    }
+    .content-layout {
+      grid-template-columns: 1fr !important;
+      gap: 1.25rem !important;
+    }
+    .articles-grid {
+      grid-template-columns: 1fr !important;
+      gap: 1rem !important;
+    }
+    .article-card-thumb {
+      height: 180px !important;
+    }
+    .featured-thumb {
+      height: 220px !important;
+    }
+    .ad-leaderboard {
+      height: auto !important;
+      padding: 10px 14px !important;
+      flex-direction: column !important;
+      align-items: flex-start !important;
+      gap: 8px !important;
+    }
+    .btn-ad-cta {
+      align-self: flex-start !important;
+    }
+
+    /* Full-Screen Reader Modal on Mobile */
+    .modal-overlay {
+      padding: 0 !important;
+      align-items: flex-end !important;
+      z-index: 2500 !important;
+    }
+    .modal-card {
+      width: 100% !important;
+      max-width: 100% !important;
+      height: 94vh !important;
+      max-height: 94vh !important;
+      border-radius: 20px 20px 0 0 !important;
+      border: none !important;
+      border-top: 1px solid rgba(56, 189, 248, 0.4) !important;
+      box-shadow: 0 -15px 40px rgba(0, 0, 0, 0.95) !important;
+      margin: 0 !important;
+    }
+    .modal-hero-cover {
+      height: 180px !important;
+      border-radius: 20px 20px 0 0 !important;
+    }
+    .modal-body-pad {
+      padding: 1.25rem 1rem 4.5rem !important;
+    }
+    .modal-hero-badges {
+      left: 12px !important;
+      right: 12px !important;
+      bottom: 12px !important;
+    }
+    #mTitle {
+      font-size: 1.3rem !important;
+      line-height: 1.35 !important;
+    }
+    .comments-section form input,
+    .comments-section form textarea {
+      width: 100% !important;
+      box-sizing: border-box !important;
+    }
+
+    /* Sticky Deal Bar Mobile Polish */
+    #stickyDealBar {
+      padding: 8px 12px !important;
+      gap: 8px !important;
+    }
+    #stickyDealBar .deal-detail-text {
+      display: none !important;
+    }
+    #stickyDealBar .deal-title-text {
+      font-size: 11px !important;
+    }
+    #stickyDealBar button {
+      padding: 6px 12px !important;
+      font-size: 11px !important;
+    }
+  }
+
 </style>
   <!-- Progressive Web App (PWA) Manifest -->
   <link rel="manifest" href="manifest.json">
@@ -1016,8 +1246,8 @@
     </div>
   </div>
 
-  <!-- Navigation -->
-  <header>
+    <!-- Navigation -->
+  <header style="position:sticky; top:0; z-index:50; backdrop-filter:blur(16px); background:rgba(3,7,18,0.95); border-bottom:1px solid rgba(255,255,255,0.08); padding:0.85rem 0;">
     <div class="container nav-wrap">
       <div class="logo">
         <span style="font-size:1.6rem;">⚡</span>
@@ -1033,18 +1263,44 @@
         <a href="about.html" style="color:#cbd5e1;">Về Chúng Tôi</a>
         <a href="contact.html" style="color:#cbd5e1;">Liên Hệ & Quảng Cáo</a>
         <a href="javascript:void(0)" onclick="openGoogleSheetsModal()" style="color:#34d399; font-weight:700;">📊 Google Sheets Báo Cáo</a>
-        <a href="https://science-cuisine-primary-walt.trycloudflare.com" target="_blank" style="color:#38bdf8; font-weight:700; border:1px solid rgba(56,189,248,0.3); padding:4px 8px; border-radius:6px; background:rgba(56,189,248,0.08);">⚙️ Web App Quản Lý</a>
+        <a href="https://zen-switch-trio-weblog.trycloudflare.com" target="_blank" style="color:#38bdf8; font-weight:700; border:1px solid rgba(56,189,248,0.3); padding:4px 8px; border-radius:6px; background:rgba(56,189,248,0.08);">⚙️ Web App Quản Lý</a>
       </div>
-      <div>
+      <div class="desktop-action-btns" style="display:flex; align-items:center; gap:8px;">
         <button type="button" class="btn-create-post" onclick="openBookingModal()" style="background:linear-gradient(135deg, #10b981 0%, #059669 100%); border:none; color:#fff; font-weight:800; box-shadow:0 0 15px rgba(16,185,129,0.35);">
           💎 Đặt Banner / Booking PR
         </button>
         <button type="button" id="themeToggleBtn" onclick="toggleTheme()" class="btn-create-post" style="background:#1e293b; color:#fbbf24; border:1px solid #334155;" title="Chuyển đổi giao diện Sáng / Tối">
           🌙 Giao diện
         </button>
-
         <button type="button" class="btn-create-post" onclick="openCreateModal()" style="background:#1e293b; color:#cbd5e1; border:1px solid #334155;">
           ✍️ Đăng Tin Mới
+        </button>
+      </div>
+      <!-- Mobile Controls (Theme + Hamburger) -->
+      <div class="mobile-controls">
+        <button type="button" onclick="toggleTheme()" class="btn-mobile-icon" title="Đổi giao diện">🌙</button>
+        <button type="button" id="mobileMenuBtn" onclick="toggleMobileDrawer()" class="btn-mobile-icon" aria-label="Menu">☰</button>
+      </div>
+    </div>
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobileDrawer">
+      <div class="mobile-nav-links">
+        <a href="#feed" class="active" onclick="filterCat('ALL'); toggleMobileDrawer();">🔥 Tin Nóng Mới Nhất</a>
+        <a href="#feed" onclick="filterCat('TOOLS'); toggleMobileDrawer();">🛠️ Đánh Giá Tool AI</a>
+        <a href="#feed" onclick="filterCat('MMO'); toggleMobileDrawer();">💸 Kiếm Tiền MMO Thực Chiến</a>
+        <a href="#feed" onclick="filterCat('PROMPT'); toggleMobileDrawer();">💡 Prompt & Tự Động Hóa</a>
+        <a href="#revenue" onclick="toggleMobileDrawer();">📈 Doanh Thu Ads Simulator</a>
+        <a href="javascript:void(0)" onclick="openGoogleSheetsModal(); toggleMobileDrawer();" style="color:#34d399;">📊 Báo Cáo Google Sheets</a>
+        <a href="https://zen-switch-trio-weblog.trycloudflare.com" target="_blank" style="color:#38bdf8;">⚙️ Web App Quản Trị Hệ Thống</a>
+        <a href="about.html" style="color:#cbd5e1;">ℹ️ Về Chúng Tôi</a>
+        <a href="contact.html" style="color:#cbd5e1;">✉️ Liên Hệ Hợp Tác</a>
+      </div>
+      <div class="mobile-action-btns">
+        <button type="button" class="btn-create-post" onclick="openBookingModal(); toggleMobileDrawer();" style="background:linear-gradient(135deg, #10b981 0%, #059669 100%); width:100%; padding:10px; font-size:13px; font-weight:800; border:none; color:#fff; border-radius:8px;">
+          💎 Đặt Banner / Booking PR
+        </button>
+        <button type="button" class="btn-create-post" onclick="openCreateModal(); toggleMobileDrawer();" style="background:#1e293b; width:100%; padding:10px; font-size:13px; font-weight:700; border:1px solid #334155; color:#cbd5e1; border-radius:8px;">
+          ✍️ Đăng Tin Tức Mới
         </button>
       </div>
     </div>
@@ -1568,6 +1824,25 @@
   <!-- Script Engine -->
   <script>
     var ARTICLES = [
+  {
+  "id": 87005,
+  "title": "Nhà nước hỗ trợ tiền để doanh nghiệp chuyển giao, đổi mới công nghệ",
+  "category": "AI",
+  "categoryLabel": "TRÍ TUỆ NHÂN TẠO",
+  "snippet": "Quỹ Đổi mới công nghệ quốc gia hỗ trợ 50% lãi suất vay, tối đa 6% mỗi năm, cho doanh nghiệp đầu tư chuyển giao, ứng dụng và đổi mới công nghệ.",
+  "readTime": "3 phút",
+  "author": "Ban Biên Tập AI Pulse (Theo VNExpress Số Hóa)",
+  "views": 0,
+  "likes": 46,
+  "icon": "🤖",
+  "source": "VNExpress Số Hóa",
+  "source_url": "https://vnexpress.net/nha-nuoc-ho-tro-tien-de-doanh-nghiep-chuyen-giao-doi-moi-cong-nghe-5138902.html",
+  "content": "<p><strong>Bản tin cập nhật từ VNExpress Số Hóa:</strong> Quỹ Đổi mới công nghệ quốc gia hỗ trợ 50% lãi suất vay, tối đa 6% mỗi năm, cho doanh nghiệp đầu tư chuyển giao, ứng dụng và đổi mới công nghệ.</p>\n<h2>1. Bối Cảnh & Diễn Biến Sự Kiện</h2>\n<p>Theo ghi nhận thực tế từ nguồn tin chính thống <em>VNExpress Số Hóa</em>, sự kiện 'Nhà nước hỗ trợ tiền để doanh nghiệp chuyển giao, đổi mới công nghệ' đang tạo ra làn sóng thảo luận sôi nổi trong cộng đồng công nghệ và giới chuyên môn tại Việt Nam.</p>\n<h2>2. Tác Động Đến Lĩnh Vực AI & Chuyển Đổi Số</h2>\n<p>Các chuyên gia nhận định đây là bước tiến quan trọng mở ra tiềm năng ứng dụng thực tiễn to lớn trong việc nâng cao hiệu suất lao động và tối ưu hóa quy trình làm việc tự động hóa.</p>\n<div style=\"background:rgba(56,189,248,0.08); border-left:4px solid #38bdf8; padding:1rem; border-radius:4px; margin:1.5rem 0;\">\n  <strong style=\"color:#38bdf8;\">💡 Góc nhìn chuyên gia AI Pulse:</strong>\n  <p style=\"margin-top:6px; color:#cbd5e1; font-size:13px;\">Việc chủ động cập nhật công nghệ mới sẽ giúp doanh nghiệp và cá nhân duy trì lợi thế cạnh tranh vượt trội trong kỷ nguyên số 2026.</p>\n</div>\n<p style=\"margin-top:1.5rem; font-size:12px; color:#94a3b8; border-top:1px dashed #334155; padding-top:10px;\">\n  📌 <em>Nguồn tin xác thực:</em> Bài viết được tổng hợp từ <strong>VNExpress Số Hóa</strong>.<br/>\n  🔗 <a href=\"https://vnexpress.net/nha-nuoc-ho-tro-tien-de-doanh-nghiep-chuyen-giao-doi-moi-cong-nghe-5138902.html\" target=\"_blank\" rel=\"noreferrer\" style=\"color:#38bdf8; text-decoration:underline;\">Nhấp vào đây để xem bài viết gốc trên VNExpress Số Hóa ↗</a>\n</p>",
+  "created_at": "2026-10-30T19:03:25.587265+00:00",
+  "publish_time": "02:03 • 31/10/2026",
+  "has_infographic": true,
+  "image_url": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=900&q=80"
+},
   {
   "id": 85895,
   "title": "Binance bị hack, chuyển đi khoản tiền số trị giá khoảng 6 tỷ USD",
@@ -3749,12 +4024,34 @@
       if (document.getElementById('mContent')) document.getElementById('mContent').innerHTML = article.content || '';
 
       document.getElementById('articleModal').style.display = 'flex';
+      const sBar = document.getElementById('stickyDealBar');
+      if (sBar) sBar.style.display = 'none';
       renderTrending();
+    }
+
+    
+    function toggleMobileDrawer() {
+      const drawer = document.getElementById('mobileDrawer');
+      const btn = document.getElementById('mobileMenuBtn');
+      if (!drawer) return;
+      const isOpen = drawer.style.display === 'block';
+      drawer.style.display = isOpen ? 'none' : 'block';
+      if (btn) btn.innerHTML = isOpen ? '☰' : '✕';
+    }
+
+    function dismissDealBar() {
+      const sBar = document.getElementById('stickyDealBar');
+      if (sBar) sBar.style.display = 'none';
+      try { sessionStorage.setItem('dismissDealBar', 'true'); } catch(e) {}
     }
 
     function closeArticleModal() {
       stopAudioIfPlaying();
       document.getElementById('articleModal').style.display = 'none';
+      const sBar = document.getElementById('stickyDealBar');
+      if (sBar && !sessionStorage.getItem('dismissDealBar')) {
+        sBar.style.display = 'flex';
+      }
     }
 
     function handleOverlayClick(event) {
@@ -4094,20 +4391,20 @@
     </div>
   </div>
 
-  <!-- Sticky High-Converting Deal Bar -->
+    <!-- Sticky High-Converting Deal Bar -->
   <div id="stickyDealBar" style="position:fixed; bottom:0; left:0; right:0; z-index:999; background:linear-gradient(90deg, #090d16 0%, #0f172a 100%); border-top:1px solid rgba(56,189,248,0.4); padding:10px 16px; box-shadow:0 -4px 20px rgba(0,0,0,0.6); display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px;">
     <div style="display:flex; align-items:center; gap:10px;">
       <span style="font-size:20px;">🔥</span>
       <div>
-        <span style="font-size:12px; font-weight:800; color:#38bdf8; text-transform:uppercase; letter-spacing:0.5px;">ƯU ĐÃI ĐỘC QUYỀN AI PULSE:</span>
-        <span style="font-size:12px; color:#f8fafc; margin-left:6px;">Giảm 75% Cloud VPS + Miễn Phí Tên Miền .COM vận hành AI 24/7!</span>
+        <span class="deal-title-text" style="font-size:12px; font-weight:800; color:#38bdf8; text-transform:uppercase; letter-spacing:0.5px;">ƯU ĐÃI ĐỘC QUYỀN AI PULSE:</span>
+        <span class="deal-detail-text" style="font-size:12px; color:#f8fafc; margin-left:6px;">Giảm 75% Cloud VPS + Miễn Phí Tên Miền .COM vận hành AI 24/7!</span>
       </div>
     </div>
     <div style="display:flex; align-items:center; gap:8px;">
       <button type="button" onclick="handleAffiliateClick('hostingerCloud')" style="background:linear-gradient(135deg, #0284c7, #06b6d4); color:#fff; border:none; border-radius:8px; padding:6px 16px; font-size:12px; font-weight:800; cursor:pointer; box-shadow:0 0 12px rgba(6,182,212,0.4);">
         Kích Hoạt Deal Giảm 75% →
       </button>
-      <button type="button" onclick="document.getElementById('stickyDealBar').style.display='none'" style="background:none; border:none; color:#94a3b8; font-size:16px; cursor:pointer; padding:4px;" title="Tắt thanh ưu đãi">✕</button>
+      <button type="button" onclick="dismissDealBar()" style="background:none; border:none; color:#94a3b8; font-size:18px; cursor:pointer; padding:6px;" title="Tắt thanh ưu đãi">✕</button>
     </div>
   </div>
 
